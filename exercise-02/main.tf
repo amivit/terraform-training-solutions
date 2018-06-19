@@ -1,53 +1,39 @@
-# ---------------------------------------------------------------------------------------------------------------------
-# CREATE A VERSIONED S3 BUCKET AS A TERRAFORM BACKEND AND A DYNAMODB TABLE FOR LOCKING
-# ---------------------------------------------------------------------------------------------------------------------
+provider "aws" {}
 
-provider "aws" {
-  region = "${var.aws_region}"
+variable "ec2_instance_tag_name" {
+  default = "Test Web Server"
 }
 
-# ---------------------------------------------------------------------------------------------------------------------
-# CONFIGURE S3 AS A BACKEND
-# Note that this has been commented out because of a slightly awkward chicken and egg: you must first apply this
-# module without a backend to create the S3 bucket and DynamoDB table and only then can you uncomment the section
-# below and run terraform init to use this module with a backend.
-# ---------------------------------------------------------------------------------------------------------------------
+resource "aws_instance" "web_server" {
+  ami           = "${data.aws_ami.ubuntu.id}"
+  instance_type = "t2.micro"
 
-#terraform {
-#  backend "s3" {
-#    region         = "us-east-1"
-#    bucket         = "iac-workshop-example-bucket"
-#    key            = "exercise-02a/terraform.tfstate"
-#    encrypt        = true
-#    dynamodb_table = "terraform-locks-example"
-#  }
-#}
-
-# ---------------------------------------------------------------------------------------------------------------------
-# CREATE THE S3 BUCKET
-# ---------------------------------------------------------------------------------------------------------------------
-
-resource "aws_s3_bucket" "remote_state" {
-  bucket = "${var.bucket_name}"
-  acl    = "private"
-
-  versioning {
-    enabled = true
+  tags {
+    Name = "${var.ec2_instance_tag_name}"
   }
 }
 
-# ---------------------------------------------------------------------------------------------------------------------
-# CREATE THE DYNAMODB TABLE
-# ---------------------------------------------------------------------------------------------------------------------
+data "aws_ami" "ubuntu" {
+  most_recent = true
+  owners      = ["099720109477"] # Canonical
 
-resource "aws_dynamodb_table" "terraform_locks" {
-  name           = "${var.dynamodb_lock_table_name}"
-  read_capacity  = 1
-  write_capacity = 1
-  hash_key       = "LockID"
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
 
-  attribute {
-    name = "LockID"
-    type = "S"
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
+
+  filter {
+    name   = "image-type"
+    values = ["machine"]
+  }
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"]
   }
 }
