@@ -4,8 +4,8 @@
 
 Getting more difficult...
 
-* Create an S3 bucket configured as a website.
-* Upload a policy allowing the bucket to be publicly accessed.
+1. Create an S3 bucket configured as a website.
+2. Upload a policy allowing the bucket to be publicly accessed.
 
 The following policy can be saved as json and utilized:
 

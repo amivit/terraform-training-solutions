@@ -1,0 +1,9 @@
+# Exercise 04
+
+1. Put your data and variable objects in their own .tf-files
+    * You can have an unlimited amount of .tf files in a folder. Terraform will read them all.
+2. Create some dummy index.html & 404.html
+3. Have them uploaded to the bucket.
+    * Hint 1: `aws_s3_bucket_object`
+    * Hint 2: `content_type = "text/html"` (otherwise your browser will want to download the file instead of render it)
+Add two  for index.html and 404.html
