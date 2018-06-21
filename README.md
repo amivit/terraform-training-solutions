@@ -9,9 +9,11 @@ Open-source software for having infrastructure as code (programatically plan, cr
 * Automation.. Duh!
     * Won't have to remember every single step you took running around the Management Console getting things connected and working. It's already defined and automated in the code.
 * Multiple environments ("workspaces")
-  * Test your system in replica environments before production... Difficult to stay agile without constant testing.
+  * Be more flexible spinning up environments for testing before production...
 * AWS works API first. So sometimes new features are available, but not via. Management Console. Terraform can be faster implementing the latest API's than the Management Console itself.
 * Terraform aims to be cloud-provider agnostic. While a lot of your settings will likely be coupled to AWS specific details, *in theory* you should be able to more easily change your cloud provider.
+
+For application stacks looking very static, maybe not always the best ROI, but should at least be considered! Not difficult once you're started...
 
 ## Alternatives?
 
@@ -31,8 +33,13 @@ To be talked about during our session:
 
 # Exercises
 
-Start at exercise-01. All exercises will build on top of the previous. Have fun!
+Start at exercise-01. All exercises will build on top of the previous. Solutions in the solution folder if stuck. Have fun!
 
 # Future Challenge
 
 Use the Management Console as little as possible 😊 Automate all the things!
+
+## Additional reading...
+
+[Terraform Gotchas and How We Work Around Them](http://heap.engineering/terraform-gotchas/) - [hackernews thread](https://news.ycombinator.com/item?id=14539814)
+
