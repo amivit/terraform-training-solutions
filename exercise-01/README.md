@@ -1,21 +1,12 @@
-# Exercise 00
+## Exercise 01
 
-This code deploys a simple web server in AWS. The web server always returns "Hello, World" on port 8080.
+* Get an EC2 instance up and running in AWS! Any AMI.
+* Try changing any detail, such as the tag "Name" or the instance size, and apply the changes.
+* Destroy it 🔥
 
+Key commands 
 
-
-
-## Quick start
-
-To deploy this module:
-
-1. Install [Terraform](https://www.terraform.io/)
-
-1. Open up `vars.tf`, set the environment variables specified at the top of the file, and fill in `default` values for 
-   any variables in the "REQUIRED PARAMETERS" section.
-
-1. Run `terraform init`
-
-1. Run `terraform plan`
-
-1. If the plan looks good, run `terraform apply`  
+1. `terraform init`
+2. `terraform plan`
+3. `terraform apply`
+4. `terraform destroy`
