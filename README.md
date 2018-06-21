@@ -41,7 +41,10 @@ Start at exercise-01. All exercises will build on top of the previous. Solutions
 
 Use the Management Console as little as possible 😊 Automate all the things!
 
-# Additional reading...
+# Additional Ressources
 
 [Terraform Gotchas and How We Work Around Them](http://heap.engineering/terraform-gotchas/) - [hackernews thread](https://news.ycombinator.com/item?id=14539814)
 
+[Terraforming](https://github.com/dtan4/terraforming) - Tool to export existing AWS infrastructure to Terraform configuration and state files. Can be very helpful If you have existing AWS infrastructure. 
+
+[1Password case story](https://blog.agilebits.com/2018/01/25/terraforming-1password/) - of them migrating their entire platform to utilize terraform
