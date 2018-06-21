@@ -9,13 +9,13 @@ Open-source software for having infrastructure as code (programatically plan, cr
 * Automation.. Duh!
     * Won't have to remember every single step you took running around the Management Console getting things connected and working. It's already defined and automated in the code.
 * Multiple environments ("workspaces")
-  * Be more flexible spinning up environments for testing before production...
+  * Be more flexible spinning up environments for testing before production.
 * Traceability
     * Track changes to the evolving infrastructure as the config evolves.
 * Amazon develops AWS API first. So sometimes new features are available, but not via. Management Console. Terraform can be faster implementing the latest API's than the Management Console itself.
 * Terraform aims to be cloud-provider agnostic. While a lot of your settings will likely be coupled to AWS specific details, *in theory* you should be able to more easily change your cloud provider.
 
-For application stacks looking very static, maybe not always the best ROI, but should at least be considered! Not difficult once you're started...
+For application stacks looking very static, Terraform is maybe not always the best ROI, but should at least be considered! Not difficult once you're started...
 
 ## Alternatives?
 

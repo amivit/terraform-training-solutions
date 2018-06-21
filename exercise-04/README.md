@@ -1,5 +1,7 @@
 # Exercise 04
 
+Introducing the ability to split up your .tf-configs into multiple files and upload files to a S3 bucket
+
 1. Put your data and variable objects in their own .tf-files
     * You can have an unlimited amount of .tf files in a folder. Terraform will read them all.
 2. Create some dummy index.html & 404.html
