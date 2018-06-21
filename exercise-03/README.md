@@ -1,4 +1,4 @@
-# Exercise 02
+# Exercise 03
 
 ## Introducing "[template_file](https://www.terraform.io/docs/providers/template/d/file.html)" and [S3 bucket creation as a static website hosting](https://www.terraform.io/docs/providers/aws/r/s3_bucket.html)
 

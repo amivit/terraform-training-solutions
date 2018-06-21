@@ -39,7 +39,7 @@ Start at exercise-01. All exercises will build on top of the previous. Solutions
 
 Use the Management Console as little as possible 😊 Automate all the things!
 
-## Additional reading...
+# Additional reading...
 
 [Terraform Gotchas and How We Work Around Them](http://heap.engineering/terraform-gotchas/) - [hackernews thread](https://news.ycombinator.com/item?id=14539814)
 
