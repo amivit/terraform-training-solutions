@@ -1,4 +1,4 @@
-# Book Club Workshop!
+# Book Club Terraform Workshop
 
 ## What is Terraform?
 

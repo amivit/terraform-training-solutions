@@ -8,5 +8,5 @@ The goal is to get familiar with modules, which is possibly the most complex cap
 
 Two ideas:
 
-* Try encapsulating our stack from the previous exercise into a simple to use module (so it functions more like a re-usable component), and then prove it works by using it in a different configuration.
-* Try utilizing a community-made module: https://registry.terraform.io/
+1. Try utilizing a [community-made module](https://registry.terraform.io/)
+2. Harder: Try encapsulating our stack from the previous exercise into a simple to use module (so it functions more like a re-usable component), and then prove it works by using it in a different configuration.
