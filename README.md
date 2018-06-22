@@ -2,7 +2,7 @@
 
 ## What is Terraform?
 
-Open-source software for having infrastructure as code (programatically plan, create, and destroy your stacks cloud infrastructure).
+Open-source software for having infrastructure as code (programatically plan, create, and destroy your stacks' cloud infrastructure).
 
 ## Why?
 
